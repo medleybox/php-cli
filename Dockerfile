@@ -10,6 +10,7 @@ ENV APP_ENV=prod \
   PAGER='busybox less' \
   MINIO_ENDPOINT='http://minio:9000' \
   REDIS_VERSION='5.3.7' \
+  REDIS_URL='redis://redis' \
   PATH='/app/bin:/app/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 RUN curl -L -o /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/${REDIS_VERSION}.tar.gz \
