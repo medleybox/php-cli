@@ -15,8 +15,9 @@ Build:
     - >
       docker build
       --pull
-      --cache-from $CI_REGISTRY_IMAGE:latest
       --tag $CI_REGISTRY_IMAGE:latest
       .
+    - docker push $CI_REGISTRY_IMAGE:latest
     - PHP_VERSION="v$(docker run --rm $CI_REGISTRY_IMAGE:latest -v | grep -Eo '8\.[0-9]\.[0-9]?[0-9]' | head -n 1)"
-    - docker push $CI_REGISTRY_IMAGE:v$PHP_VERSION
+    - echo $PHP_VERSION
+    - docker push $CI_REGISTRY_IMAGE:$PHP_VERSION
