@@ -1,7 +1,7 @@
 # PHP CLI Docker image
 > PHP 8 Alpine cli docker image
 
-PHP `v8.2.7` Alpine `v3.17` cli docker image to run PHP code with the following extensions installed:
+PHP `v8.3.1` Alpine `v3.18` cli docker image to run PHP code with the following extensions installed:
 - exif
 - gd
 - intl
